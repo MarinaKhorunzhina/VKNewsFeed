@@ -11,12 +11,12 @@
 			</array>
 		</dict>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>vk</string>
-        <string>vk-share</string>
-        <string>vkauthorize</string>
-    </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>vk</string>
+		<string>vk-share</string>
+		<string>vkauthorize</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -31,7 +31,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>AuthViewController</string>
 				</dict>
 			</array>
 		</dict>
