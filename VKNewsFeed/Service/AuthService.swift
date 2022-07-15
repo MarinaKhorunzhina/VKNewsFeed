@@ -16,7 +16,21 @@ protocol AuthServiceDeledate: AnyObject {
 
 class AuthService: NSObject, VKSdkDelegate,VKSdkUIDelegate {
     
-   
+    private let appId = "8218170"
+    private let vkSdk: VKSdk
+    override init(){
+        vkSdk = VKSdk.initialize(withAppId: appId)
+        super.init()
+        vkSdk.register(self)
+        vkSdk.uiDelegate = self
+            print("VKSdk.initialize")
+    
+     }
+    weak var delegate: AuthServiceDeledate?
+    
+    var token: String? {
+        return VKSdk.accessToken()?.accessToken
+    }
     
     func wakeUpSession () {
         let scope = ["offline"]
@@ -34,17 +48,8 @@ class AuthService: NSObject, VKSdkDelegate,VKSdkUIDelegate {
             }
     }
     }
-    private let appId = "8218170"
-    private let vkSdk: VKSdk
-    override init(){
-        vkSdk = VKSdk.initialize(withAppId: appId)
-        super.init()
-        vkSdk.register(self)
-        vkSdk.uiDelegate = self
-            print("VKSdk.initialize")
-    
-     }
-    weak var delegate: AuthServiceDeledate?
+   
+   
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         print(#function)
         if result.token != nil {

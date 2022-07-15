@@ -9,15 +9,17 @@ import UIKit
 import VK_ios_sdk
 
 class AuthViewController: UIViewController {
+
     private var authService: AuthService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authService = SceneDelegate.shared().authService
-        view.backgroundColor = .gray
+
        
+        //authService = AuthService()
+        authService = SceneDelegate.shared().authService
     }
-   
+    
 
     @IBAction func singInTouch(_ sender: UIButton) {
         authService.wakeUpSession()

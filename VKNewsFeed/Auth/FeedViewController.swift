@@ -9,8 +9,10 @@ import Foundation
 import UIKit
  
 class FeedViewController: UIViewController {
+    private let networkService = NetworkService()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.backgroundColor = .blue
+        networkService.getFeed()
     }
 }
