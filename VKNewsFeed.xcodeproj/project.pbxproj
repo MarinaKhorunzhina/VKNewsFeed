@@ -72,7 +72,7 @@
 		9C6F88A62880A42C0058931C /* FeedViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C773BDB28807D3E008C4921 /* AuthViewController.storyboard */,
+				9C7863352880A1B900CC94E1 /* FeedViewController.swift */,
 				9C7863372880A1ED00CC94E1 /* FeedViewController.storyboard */,
 			);
 			path = FeedViewController;
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9C773BC8287F3177008C4921 /* AuthViewController.swift */,
-				9C7863352880A1B900CC94E1 /* FeedViewController.swift */,
+				9C773BDB28807D3E008C4921 /* AuthViewController.storyboard */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
