@@ -18,6 +18,8 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
   var service: NewsfeedService?
   private var fetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
     
+   
+    
   func makeRequest(request: Newsfeed.Model.Request.RequestType) {
     if service == nil {
       service = NewsfeedService()
