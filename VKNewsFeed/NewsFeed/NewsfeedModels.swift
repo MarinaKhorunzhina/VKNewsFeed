@@ -38,6 +38,13 @@ enum Newsfeed {
             var comments: String?
             var shares: String?
             var views: String?
+            var photoAttachement: FeedCellPhotoAttachementViewModel?
+        }
+        
+         struct FeedCellPhotoAttachment: FeedCellPhotoAttachementViewModel {
+            var photoUrlString: String?
+            var width: Int
+            var height: Int
         }
         let cells: [Cell]
-}
+    }
