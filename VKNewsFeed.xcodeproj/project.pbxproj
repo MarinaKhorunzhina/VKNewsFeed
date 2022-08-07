@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78DF9F19AE072A48182474F2 /* Pods_VKNewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D46AFBA5249D0B14726A2C2 /* Pods_VKNewsFeed.framework */; };
+		9C48D101289FD62C00828AEB /* NewsfeedCellLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C48D100289FD62C00828AEB /* NewsfeedCellLayoutCalculator.swift */; };
 		9C6F88A92881D26F0058931C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F88A82881D26F0058931C /* NetworkService.swift */; };
 		9C6F88AB2881D88C0058931C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F88AA2881D88C0058931C /* API.swift */; };
 		9C6F88C62888687C0058931C /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F88C52888687C0058931C /* FeedResponse.swift */; };
@@ -37,6 +38,7 @@
 		2D46AFBA5249D0B14726A2C2 /* Pods_VKNewsFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKNewsFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D31A4435FAC3DE326C8408D /* Pods-VKNewsFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKNewsFeed.release.xcconfig"; path = "Target Support Files/Pods-VKNewsFeed/Pods-VKNewsFeed.release.xcconfig"; sourceTree = "<group>"; };
 		590A3B86FE5E99FD220CE60E /* Pods-VKNewsFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKNewsFeed.debug.xcconfig"; path = "Target Support Files/Pods-VKNewsFeed/Pods-VKNewsFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		9C48D100289FD62C00828AEB /* NewsfeedCellLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedCellLayoutCalculator.swift; sourceTree = "<group>"; };
 		9C6F88A82881D26F0058931C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9C6F88AA2881D88C0058931C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9C6F88C52888687C0058931C /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9C6F88DB288B05290058931C /* NewsfeedCell.swift */,
+				9C48D100289FD62C00828AEB /* NewsfeedCellLayoutCalculator.swift */,
 				9C6F88DD288B05750058931C /* NewsfeedCell.xib */,
 			);
 			path = Cell;
@@ -322,6 +325,7 @@
 				9C6F88D42889C46C0058931C /* NewsfeedModels.swift in Sources */,
 				9C773BD9287F46E9008C4921 /* AuthService.swift in Sources */,
 				9C6F88D22889C46C0058931C /* NewsfeedWorker.swift in Sources */,
+				9C48D101289FD62C00828AEB /* NewsfeedCellLayoutCalculator.swift in Sources */,
 				9C6F88AB2881D88C0058931C /* API.swift in Sources */,
 				9C6F88C8288872930058931C /* NetvorkDataFetcher.swift in Sources */,
 				9C6F88D62889C46C0058931C /* NewsfeedInteractor.swift in Sources */,
