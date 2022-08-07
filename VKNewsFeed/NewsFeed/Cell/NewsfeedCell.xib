@@ -16,11 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="325-7U-Fis" userLabel="Card View">
-                        <rect key="frame" x="6" y="6" width="363" height="200"/>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="325-7U-Fis" userLabel="Card View">
+                        <rect key="frame" x="8" y="0.0" width="359" height="201"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYz-lN-8o5" userLabel="Top View">
-                                <rect key="frame" x="9" y="8" width="344" height="36"/>
+                                <rect key="frame" x="9" y="8" width="340" height="36"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-6r-8nW" customClass="WebImageView" customModule="VKNewsFeed" customModuleProvider="target">
@@ -29,7 +30,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bme-wL-O5V">
-                                        <rect key="frame" x="44" y="2" width="292" height="15"/>
+                                        <rect key="frame" x="44" y="2" width="288" height="15"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -37,7 +38,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV7-oj-cQw">
-                                        <rect key="frame" x="44" y="18" width="292" height="15"/>
+                                        <rect key="frame" x="44" y="18" width="288" height="15"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -48,7 +49,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzB-AK-Fp5">
-                                <rect key="frame" x="11" y="52" width="344" height="34"/>
+                                <rect key="frame" x="8" y="52" width="343" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -56,11 +57,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ePk-qx-6PD" customClass="WebImageView" customModule="VKNewsFeed" customModuleProvider="target">
-                                <rect key="frame" x="9" y="85" width="344" height="63"/>
+                                <rect key="frame" x="0.0" y="113" width="359" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osp-bJ-kPb" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="156" width="363" height="44"/>
+                                <rect key="frame" x="0.0" y="156" width="359" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Osf-cf-nIb">
@@ -118,7 +119,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1i-V1-0Nb">
-                                        <rect key="frame" x="283" y="0.0" width="80" height="44"/>
+                                        <rect key="frame" x="279" y="0.0" width="80" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="6N7-yg-prT">
@@ -142,14 +143,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="325-7U-Fis" secondAttribute="bottom" constant="6" id="3c2-QA-QHM"/>
-                    <constraint firstAttribute="trailing" secondItem="325-7U-Fis" secondAttribute="trailing" constant="6" id="IFv-lY-667"/>
-                    <constraint firstItem="325-7U-Fis" firstAttribute="top" secondItem="Jhx-Un-LlH" secondAttribute="top" constant="6" id="LEi-N5-qZM"/>
-                    <constraint firstItem="325-7U-Fis" firstAttribute="leading" secondItem="Jhx-Un-LlH" secondAttribute="leading" constant="6" id="Mbg-dq-Oo8"/>
-                </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bottomView" destination="osp-bJ-kPb" id="hcT-tX-6O8"/>
                 <outlet property="cardView" destination="325-7U-Fis" id="m04-XU-2rZ"/>
                 <outlet property="commentsLabel" destination="u5o-mB-8M3" id="1NR-k6-Wgx"/>
                 <outlet property="dateLabel" destination="sV7-oj-cQw" id="1DR-3Y-9QH"/>
