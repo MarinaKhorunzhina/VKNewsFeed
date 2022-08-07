@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 import UIKit
 
 extension String {
@@ -18,8 +17,8 @@ extension String {
                                      options: .usesLineFragmentOrigin,
                                      attributes: [NSAttributedString.Key.font : font],
                                      context: nil)
+        // ceil - округление
         return ceil(size.height)
     }
     
 }
-

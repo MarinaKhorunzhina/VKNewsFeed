@@ -19,6 +19,8 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
 
     private var feedViewModel = FeedViewModel.init(cells: [])
     @IBOutlet weak var table: UITableView!
+    
+    
     // MARK: Setup
   
   private func setup() {
@@ -41,24 +43,23 @@ class NewsfeedViewController: UIViewController, NewsfeedDisplayLogic {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-      setup()
-      table.register(UINib(nibName: "NewsfeedCell", bundle: nil), forCellReuseIdentifier: NewsfeedCell.reuseId)
-      table.separatorStyle = .none
-      table.backgroundColor = .clear
+    setup()
+    
+    table.register(UINib(nibName: "NewsfeedCell", bundle: nil), forCellReuseIdentifier: NewsfeedCell.reuseId)
+    table.separatorStyle = .none
+    table.backgroundColor = .clear
       view.backgroundColor = .systemCyan
-      
-      interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsfeed)
-      
+    
+    interactor?.makeRequest(request: Newsfeed.Model.Request.RequestType.getNewsfeed)
   }
   
   func displayData(viewModel: Newsfeed.Model.ViewModel.ViewModelData) {
-      
-      switch viewModel {
-          
-      case .displayNewsfeed(feedViewModel: let feedViewModel):
-          self.feedViewModel = feedViewModel
-          table.reloadData()
-      }
+
+    switch viewModel {
+    case .displayNewsfeed(let feedViewModel):
+        self.feedViewModel = feedViewModel
+        table.reloadData()
+    }
   }
   
 }

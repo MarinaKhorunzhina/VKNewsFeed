@@ -20,18 +20,20 @@ protocol FeedCellViewModel {
     var photoAttachement: FeedCellPhotoAttachementViewModel? { get }
     var sizes: FeedCellSizes { get }
 }
+
 protocol FeedCellSizes {
     var postLabelFrame: CGRect { get }
     var attachmentFrame: CGRect { get }
     var bottomViewFrame: CGRect { get }
     var totalHeight: CGFloat { get }
 }
+
 protocol FeedCellPhotoAttachementViewModel {
     var photoUrlString: String? { get }
     var width: Int { get }
     var height: Int { get }
 }
- 
+
 class NewsfeedCell: UITableViewCell {
     
     static let reuseId = "NewsfeedCell"
@@ -48,17 +50,24 @@ class NewsfeedCell: UITableViewCell {
     @IBOutlet weak var viewsLabel: UILabel!
     @IBOutlet weak var bottomView: UIView!
     
+    override func prepareForReuse() {
+        iconImageView.set(imageURL: nil)
+        postImageView.set(imageURL: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         iconImageView.layer.cornerRadius = iconImageView.frame.width / 2
         iconImageView.clipsToBounds = true
         
         cardView.layer.cornerRadius = 10
         cardView.clipsToBounds = true
+        
         backgroundColor = .clear
         selectionStyle = .none
     }
+    
     func set(viewModel: FeedCellViewModel) {
         iconImageView.set(imageURL: viewModel.iconUrlString)
         namelabel.text = viewModel.name
@@ -71,14 +80,14 @@ class NewsfeedCell: UITableViewCell {
         
         postlabel.frame = viewModel.sizes.postLabelFrame
         postImageView.frame = viewModel.sizes.attachmentFrame
-        //bottomView.frame = viewModel.sizes.bottomViewFrame
-    
-    if let photoAttachment = viewModel.photoAttachement {
-        postImageView.set(imageURL: photoAttachment.photoUrlString)
-        postImageView.isHidden = false
-    } else {
-        postImageView.isHidden = true
+        bottomView.frame = viewModel.sizes.bottomViewFrame
+        
+        if let photoAttachment = viewModel.photoAttachement {
+            postImageView.set(imageURL: photoAttachment.photoUrlString)
+            postImageView.isHidden = false
+        } else {
+            postImageView.isHidden = true
+        }
     }
-}
-
+    
 }
