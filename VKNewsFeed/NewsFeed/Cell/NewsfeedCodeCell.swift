@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol NewsfeedCodeCellDelegate: class {
+protocol NewsfeedCodeCellDelegate: AnyObject {
     func revealPost(for cell: NewsfeedCodeCell)
 }
 
@@ -51,6 +51,8 @@ final class NewsfeedCodeCell: UITableViewCell {
         button.setTitle("Показать полностью...", for: .normal)
         return button
     }()
+    
+    let galleryCollectionView = GalleryCollectionView()
     
     let postImageView: WebImageView = {
         let imageView = WebImageView()
@@ -207,6 +209,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     
     @objc func moreTextButtonTouch() {
         delegate?.revealPost(for: self)
+        print ("1234567")
     }
     
     func set(viewModel: FeedCellViewModel) {
@@ -225,13 +228,23 @@ final class NewsfeedCodeCell: UITableViewCell {
         bottomView.frame = viewModel.sizes.bottomViewFrame
         moreTextButton.frame = viewModel.sizes.moreTextButtonFrame
         
-        if let photoAttachment = viewModel.photoAttachement {
-            postImageView.set(imageURL: photoAttachment.photoUrlString)
+        if let photoAttachment = viewModel.photoAttachements.first, viewModel.photoAttachements.count == 1 {
             postImageView.isHidden = false
-        } else {
+            galleryCollectionView.isHidden = true
+            postImageView.set(imageURL: photoAttachment.photoUrlString)
+            postImageView.frame = viewModel.sizes.attachmentFrame
+        } else if viewModel.photoAttachements.count > 1 {
             postImageView.isHidden = true
+            galleryCollectionView.isHidden = false
+            galleryCollectionView.frame = viewModel.sizes.attachmentFrame
+            galleryCollectionView.set(photos: viewModel.photoAttachements)
+        }
+        else {
+            postImageView.isHidden = true
+            galleryCollectionView.isHidden = true
         }
     }
+    
     
     private func overlayFourthLayerOnBottomViewViews() {
         likesView.addSubview(likesImage)
@@ -330,9 +343,10 @@ final class NewsfeedCodeCell: UITableViewCell {
     private func overlaySecondLayer() {
         cardView.addSubview(topView)
         cardView.addSubview(postlabel)
+        cardView.addSubview(moreTextButton)
         cardView.addSubview(postImageView)
         cardView.addSubview(bottomView)
-        cardView.addSubview(moreTextButton)
+        cardView.addSubview(galleryCollectionView)
         
         // topView constraints
         topView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 8).isActive = true

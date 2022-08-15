@@ -39,6 +39,7 @@ class NewsfeedInteractor: NewsfeedBusinessLogic {
       case .revealPostIds(postId: let postId):
           revealedPostIds.append(postId)
           presentFeed()
+          
       }
   }
     private func presentFeed() {

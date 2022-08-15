@@ -35,7 +35,7 @@ struct Constants {
 }
  
 protocol FeedCellLayoutCalculatorProtocol {
-    func sizes(postText: String?, photoAttachment: FeedCellPhotoAttachementViewModel?, isFullSizedPost: Bool) -> FeedCellSizes
+    func sizes(postText: String?, photoAttachments: [FeedCellPhotoAttachementViewModel], isFullSizedPost: Bool) -> FeedCellSizes
 }
 
 final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
@@ -46,7 +46,7 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         self.screenWidth = screenWidth
     }
 
-    func sizes(postText: String?, photoAttachment: FeedCellPhotoAttachementViewModel?, isFullSizedPost: Bool) -> FeedCellSizes {
+    func sizes(postText: String?, photoAttachments: [FeedCellPhotoAttachementViewModel], isFullSizedPost: Bool) -> FeedCellSizes {
         
         let cardViewWidth = screenWidth - Constants.cardInsets.left - Constants.cardInsets.right
         var showMoreTextButton = false
@@ -87,14 +87,25 @@ final class FeedCellLayoutCalculator: FeedCellLayoutCalculatorProtocol {
         var attachmentFrame = CGRect(origin: CGPoint(x: 0, y: attachmentTop),
                                      size: CGSize.zero)
         
-        if let attachment = photoAttachment {
+//        if let attachment = photoAttachment {
+//            let photoHeight: Float = Float(attachment.height)
+//            let photoWidth: Float = Float(attachment.width)
+//            let ratio = CGFloat(photoHeight / photoWidth)
+//
+//            attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+//        }
+        
+        if let attachment = photoAttachments.first {
             let photoHeight: Float = Float(attachment.height)
             let photoWidth: Float = Float(attachment.width)
             let ratio = CGFloat(photoHeight / photoWidth)
-            
-            attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+            if photoAttachments.count == 1 {
+                attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+            } else if photoAttachments.count > 1 {
+                print("More then 1 photo")
+                attachmentFrame.size = CGSize(width: cardViewWidth, height: cardViewWidth * ratio)
+            }
         }
-        
         // MARK: Работа с bottomViewFrame
         
         let bottomViewTop = max(postLabelFrame.maxY, attachmentFrame.maxY)

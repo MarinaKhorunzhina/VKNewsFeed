@@ -156,7 +156,7 @@
                 <outlet property="shareslabel" destination="MPg-x2-8LP" id="96a-6E-CMr"/>
                 <outlet property="viewsLabel" destination="EL4-QZ-hsr" id="uie-5h-RUU"/>
             </connections>
-            <point key="canvasLocation" x="-173" y="21"/>
+            <point key="canvasLocation" x="-173.18840579710147" y="20.758928571428569"/>
         </tableViewCell>
     </objects>
     <resources>
