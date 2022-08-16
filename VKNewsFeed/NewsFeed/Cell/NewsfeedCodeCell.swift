@@ -198,7 +198,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         cardView.layer.cornerRadius = 10
         cardView.clipsToBounds = true
         
-        moreTextButton.addTarget(self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
+        moreTextButton.addTarget( self, action: #selector(moreTextButtonTouch), for: .touchDown)
         
         overlayFirstLayer() // первый слой
         overlaySecondLayer() // второй слой
