@@ -49,6 +49,8 @@ final class NewsfeedCodeCell: UITableViewCell {
         button.contentHorizontalAlignment = .left
         button.contentVerticalAlignment = .center
         button.setTitle("Показать полностью...", for: .normal)
+        
+        
         return button
     }()
     
@@ -198,7 +200,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         cardView.layer.cornerRadius = 10
         cardView.clipsToBounds = true
         
-        moreTextButton.addTarget( self, action: #selector(moreTextButtonTouch), for: .touchDown)
+        moreTextButton.addTarget( self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
         
         overlayFirstLayer() // первый слой
         overlaySecondLayer() // второй слой
@@ -347,6 +349,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         cardView.addSubview(postImageView)
         cardView.addSubview(bottomView)
         cardView.addSubview(galleryCollectionView)
+        
         
         // topView constraints
         topView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 8).isActive = true
