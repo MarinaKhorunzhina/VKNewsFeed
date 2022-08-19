@@ -34,14 +34,28 @@ final class NewsfeedCodeCell: UITableViewCell {
         return view
     }()
     
-    let postlabel: UILabel = {
-       let label = UILabel()
-        label.numberOfLines = 0
-        label.font = Constants.postLabelFont
-        label.textColor = #colorLiteral(red: 0.227329582, green: 0.2323184013, blue: 0.2370472848, alpha: 1)
-        return label
+//    let postlabel: UILabel = {
+//       let label = UILabel()
+//        label.numberOfLines = 0
+//        label.font = Constants.postLabelFont
+//        label.textColor = #colorLiteral(red: 0.227329582, green: 0.2323184013, blue: 0.2370472848, alpha: 1)
+//        return label
+//    }()
+   
+    let postlabel: UITextView = {
+       let textView = UITextView()
+        textView.font = Constants.postLabelFont
+        textView.isScrollEnabled = false
+        textView.isSelectable = true
+        textView.isUserInteractionEnabled = true
+        textView.isEditable = false
+        
+        let padding = textView.textContainer.lineFragmentPadding
+        textView.textContainerInset = UIEdgeInsets.init(top: 0, left: -padding, bottom: 0, right: -padding)
+        
+        textView.dataDetectorTypes = UIDataDetectorTypes.all
+        return textView
     }()
-    
     let moreTextButton: UIButton = {
        let button = UIButton()
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
@@ -49,8 +63,7 @@ final class NewsfeedCodeCell: UITableViewCell {
         button.contentHorizontalAlignment = .left
         button.contentVerticalAlignment = .center
         button.setTitle("Показать полностью...", for: .normal)
-        
-        
+       
         return button
     }()
     
@@ -201,7 +214,6 @@ final class NewsfeedCodeCell: UITableViewCell {
         cardView.clipsToBounds = true
         
         moreTextButton.addTarget( self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
-        
         overlayFirstLayer() // первый слой
         overlaySecondLayer() // второй слой
         overlayThirdLayerOnTopView() // третий слой на topView
