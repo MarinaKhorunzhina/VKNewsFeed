@@ -96,7 +96,7 @@ class RowLayout: UICollectionViewLayout {
         
         rowHeight = myPhotoWithMinRatio.height * difference
         
-        rowHeight = rowHeight * CGFloat(RowLayout.numbersOfRows)
+        //rowHeight = rowHeight * CGFloat(RowLayout.numbersOfRows)
         return rowHeight
     }
     
