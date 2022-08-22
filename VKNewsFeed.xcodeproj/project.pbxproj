@@ -18,6 +18,8 @@
 		9C48D13228AD538400828AEB /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C48D13128AD538400828AEB /* TitleView.swift */; };
 		9C48D13428AD53B300828AEB /* InsetableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C48D13328AD53B300828AEB /* InsetableTextField.swift */; };
 		9C48D13628AD5ADC00828AEB /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C48D13528AD5ADC00828AEB /* UserResponse.swift */; };
+		9C48D13928B3E1D500828AEB /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C48D13828B3E1D500828AEB /* FooterView.swift */; };
+		9C48D13B28B3E97600828AEB /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 9C48D13A28B3E97600828AEB /* Localizable.stringsdict */; };
 		9C6F88A92881D26F0058931C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F88A82881D26F0058931C /* NetworkService.swift */; };
 		9C6F88AB2881D88C0058931C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F88AA2881D88C0058931C /* API.swift */; };
 		9C6F88C62888687C0058931C /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F88C52888687C0058931C /* FeedResponse.swift */; };
@@ -57,6 +59,8 @@
 		9C48D13128AD538400828AEB /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		9C48D13328AD53B300828AEB /* InsetableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetableTextField.swift; sourceTree = "<group>"; };
 		9C48D13528AD5ADC00828AEB /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		9C48D13828B3E1D500828AEB /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		9C48D13A28B3E97600828AEB /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		9C6F88A82881D26F0058931C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9C6F88AA2881D88C0058931C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9C6F88C52888687C0058931C /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
@@ -142,6 +146,14 @@
 			path = TitleView;
 			sourceTree = "<group>";
 		};
+		9C48D13728B3E1C800828AEB /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				9C48D13828B3E1D500828AEB /* FooterView.swift */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
 		9C6F88A62880A42C0058931C /* FeedViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		9C6F88C92889C4010058931C /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				9C48D13728B3E1C800828AEB /* FooterView */,
 				9C48D13028AD535100828AEB /* TitleView */,
 				9C48D12928AADA6D00828AEB /* GalleryView */,
 				9C6F88DA288B05010058931C /* Cell */,
@@ -227,6 +240,7 @@
 				9C773BCD287F3177008C4921 /* Assets.xcassets */,
 				9C773BCF287F3177008C4921 /* LaunchScreen.storyboard */,
 				9C773BD2287F3177008C4921 /* Info.plist */,
+				9C48D13A28B3E97600828AEB /* Localizable.stringsdict */,
 				9C6F88C92889C4010058931C /* NewsFeed */,
 			);
 			path = VKNewsFeed;
@@ -310,6 +324,7 @@
 				9C773BCE287F3177008C4921 /* Assets.xcassets in Resources */,
 				9C6F88DE288B05750058931C /* NewsfeedCell.xib in Resources */,
 				9C7863382880A1ED00CC94E1 /* FeedViewController.storyboard in Resources */,
+				9C48D13B28B3E97600828AEB /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6F88C62888687C0058931C /* FeedResponse.swift in Sources */,
+				9C48D13928B3E1D500828AEB /* FooterView.swift in Sources */,
 				9C6F88D52889C46C0058931C /* NewsfeedViewController.swift in Sources */,
 				9C773BC9287F3177008C4921 /* AuthViewController.swift in Sources */,
 				9C773BC5287F3177008C4921 /* AppDelegate.swift in Sources */,
