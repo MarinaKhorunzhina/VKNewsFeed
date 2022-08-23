@@ -33,14 +33,6 @@ final class NewsfeedCodeCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-//    let postlabel: UILabel = {
-//       let label = UILabel()
-//        label.numberOfLines = 0
-//        label.font = Constants.postLabelFont
-//        label.textColor = #colorLiteral(red: 0.227329582, green: 0.2323184013, blue: 0.2370472848, alpha: 1)
-//        return label
-//    }()
    
     let postlabel: UITextView = {
        let textView = UITextView()
@@ -58,7 +50,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     }()
     let moreTextButton: UIButton = {
        let button = UIButton()
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         button.setTitleColor(.systemCyan, for: .normal)
         button.contentHorizontalAlignment = .left
         button.contentVerticalAlignment = .center
@@ -223,7 +215,7 @@ final class NewsfeedCodeCell: UITableViewCell {
     
     @objc func moreTextButtonTouch() {
         delegate?.revealPost(for: self)
-        print ("1234567")
+        
     }
     
     func set(viewModel: FeedCellViewModel) {

@@ -16,6 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGG-xG-lCp" customClass="GradientView" customModule="VKNewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NXr-du-s6W">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="systemCyanColor" catalog="System" colorSpace="catalog"/>
@@ -28,12 +40,16 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jGG-xG-lCp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0fI-ga-Ppd"/>
                             <constraint firstAttribute="bottom" secondItem="NXr-du-s6W" secondAttribute="bottom" id="1mZ-72-bTx"/>
                             <constraint firstItem="NXr-du-s6W" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="W5l-YA-X8v"/>
+                            <constraint firstAttribute="bottom" secondItem="jGG-xG-lCp" secondAttribute="bottom" id="XlR-X4-3iE"/>
                             <constraint firstItem="NXr-du-s6W" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="YOr-L1-02O"/>
+                            <constraint firstItem="jGG-xG-lCp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dUc-cw-Wqm"/>
                             <constraint firstItem="NXr-du-s6W" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="i25-6x-tgz"/>
+                            <constraint firstItem="jGG-xG-lCp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xsw-sT-NLf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -42,12 +58,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17.39130434782609" y="59.598214285714285"/>
+            <point key="canvasLocation" x="286.95652173913044" y="18.75"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

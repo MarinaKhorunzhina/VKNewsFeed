@@ -68,27 +68,4 @@ class NewsfeedCell: UITableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
     }
-    
-//    func set(viewModel: FeedCellViewModel) {
-//        iconImageView.set(imageURL: viewModel.iconUrlString)
-//        namelabel.text = viewModel.name
-//        dateLabel.text = viewModel.date
-//        postlabel.text = viewModel.text
-//        likesLabel.text = viewModel.likes
-//        commentsLabel.text = viewModel.comments
-//        shareslabel.text = viewModel.shares
-//        viewsLabel.text = viewModel.views
-//
-//        postlabel.frame = viewModel.sizes.postLabelFrame
-//        postImageView.frame = viewModel.sizes.attachmentFrame
-//        bottomView.frame = viewModel.sizes.bottomViewFrame
-//
-//        if let photoAttachment = viewModel.photoAttachement {
-//            postImageView.set(imageURL: photoAttachment.photoUrlString)
-//            postImageView.isHidden = false
-//        } else {
-//            postImageView.isHidden = true
-//        }
-//    }
-    
 }
